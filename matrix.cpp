@@ -1,20 +1,31 @@
-﻿// matrix.cpp : Ten plik zawiera funkcję „main”. W nim rozpoczyna się i kończy wykonywanie programu.
-//
-
+﻿#include "matrixClass.h"
 #include <iostream>
 
-int main()
-{
-    std::cout << "Hello World!\n";
+int main() {
+    // Test default constructor
+    matrixClass m1;
+    std::cout << "Default constructor:\n" << m1 << std::endl;
+
+    // Test parameterized constructor
+    matrixClass m2(3);
+    std::cout << "Parameterized constructor (3x3 matrixClass):\n" << m2 << std::endl;
+
+    // Test parameterized constructor with array
+    int arr[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+    matrixClass m3(3, arr);
+    std::cout << "Parameterized constructor with array (3x3 matrixClass):\n" << m3 << std::endl;
+
+    // Test copy constructor
+    matrixClass m4(m3);
+    std::cout << "Copy constructor:\n" << m4 << std::endl;
+
+    // Test losuj method
+    m2.losuj();
+    std::cout << "Randomized matrixClass:\n" << m2 << std::endl;
+
+    // Test operators
+    m2 += 5;
+    std::cout << "matrixClass after adding 5 to each element:\n" << m2 << std::endl;
+
+    return 0;
 }
-
-// Uruchomienie programu: Ctrl + F5 lub menu Debugowanie > Uruchom bez debugowania
-// Debugowanie programu: F5 lub menu Debugowanie > Rozpocznij debugowanie
-
-// Porady dotyczące rozpoczynania pracy:
-//   1. Użyj okna Eksploratora rozwiązań, aby dodać pliki i zarządzać nimi
-//   2. Użyj okna programu Team Explorer, aby nawiązać połączenie z kontrolą źródła
-//   3. Użyj okna Dane wyjściowe, aby sprawdzić dane wyjściowe kompilacji i inne komunikaty
-//   4. Użyj okna Lista błędów, aby zobaczyć błędy
-//   5. Wybierz pozycję Projekt > Dodaj nowy element, aby utworzyć nowe pliki kodu, lub wybierz pozycję Projekt > Dodaj istniejący element, aby dodać istniejące pliku kodu do projektu
-//   6. Aby w przyszłości ponownie otworzyć ten projekt, przejdź do pozycji Plik > Otwórz > Projekt i wybierz plik sln
