@@ -1,7 +1,6 @@
 # Programowanie zaawansowane – P4 (projekt dwuosobowy)
 
-Akademia Nauk Stosowanych w Nowym Sączu 2024 / 2025r. ver. 1.0
-mgr inż. Dawid Kotlarski
+
 Napisz klasę matrix. Macierz jest kwadratowa (n na n) gdzie n jest wielkością macierzy.
 Macierz przechowywana jest w zmiennej dynamicznej (na stercie). Silnik biblioteki matrix należy
 napisać samemu bez korzystania z wyspecjalizowanych bibliotek.
